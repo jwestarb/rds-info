@@ -12,9 +12,9 @@ var svc = new Service({
   }
 });
 
-svc.user.domain      = config.svc.exec_domain;
-svc.user.account     = config.svc.exec_account;
-svc.user.password    = config.svc.exec_password;
+//svc.user.domain      = config.svc.exec_domain;
+//svc.user.account     = config.svc.exec_account;
+//svc.user.password    = config.svc.exec_password;
 svc.logOnAs.domain   = config.svc.logOnAs_domain;
 svc.logOnAs.account  = config.svc.logOnAs_account;
 svc.logOnAs.password = config.svc.logOnAs_password;
