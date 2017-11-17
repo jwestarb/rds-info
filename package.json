@@ -1,0 +1,34 @@
+{
+  "name": "rds-info",
+  "version": "0.0.1",
+  "description": "RDS Service connections info.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jwestarb/rds-info.git"
+  },
+  "keywords": [
+    "windows",
+    "rds",
+    "service",
+    "connection",
+    "information",
+    "server"
+  ],
+  "author": "Julio Cesar Westarb Junior <jwestarb@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "express": "^4.16.2",
+    "node-run-cmd": "^1.0.1",
+    "node-windows": "^0.1.14"
+  },
+  "bugs": {
+    "url": "https://github.com/jwestarb/rds-info/issues"
+  },
+  "homepage": "https://github.com/jwestarb/rds-info#readme",
+  "readmeFilename": "README.md"
+}
