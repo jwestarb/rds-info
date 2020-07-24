@@ -9,10 +9,10 @@ const port = config.web.port;
 const servers = config.servers;
 const command = config.command;
 
-var rds_info = {}
+var rds_info = {'conexoes': {}}
 
 servers.forEach(function(item){
-	rds_info[item] = {'ativos': 0, 'inativos': 0, 'total': 0};
+	rds_info.conexoes[item] = {'nome': item, 'ativos': 0, 'inativos': 0, 'total': 0};
 });
 
 function intervalFunc(server) {
@@ -38,9 +38,9 @@ function intervalFunc(server) {
 				}
 			}
 		});
-		rds_info[server]['ativos'] = ativos;
-		rds_info[server]['inativos'] = inativos;
-		rds_info[server]['total'] = ativos + inativos;
+		rds_info.conexoes[server]['ativos'] = ativos;
+		rds_info.conexoes[server]['inativos'] = inativos;
+		rds_info.conexoes[server]['total'] = ativos + inativos;
 		util.log('Finalizado em ' + server + '=> A:' + ativos + '/I: ' + inativos + '/T: ' + (ativos + inativos));
 	};
 
@@ -52,6 +52,12 @@ function intervalFunc(server) {
 
 servers.forEach(function(item){
 	setInterval(function() { intervalFunc(item); }, config.execQueryInterval);
+});
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
 });
 
 app.get('/', (req, res) => res.send('RDS-INFO'));

@@ -12,7 +12,7 @@ config.svc.logOnAs_password = process.env.RDS_INFO_SVC_PASSWORD || 'password';
 
 config.web.port = process.env.RDS_INFO_WEB_PORT || 3000;
 
-config.servers = ['TS01','TS02','TS03','TS04','TS05','TS06','TS07','TS08','TS09','TS10','TS11','RDS01','RDS02'];
+config.servers = ['TS21','TS22','TS23','TS24','TS25','TS26','TS27','TS28','TS29','TS30','TS31','TS32','TSEXT33'];
 config.command = 'query.exe USER';
 config.execQueryInterval = 30000;
 
