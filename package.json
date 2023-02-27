@@ -26,7 +26,7 @@
     "express": "^4.16.2",
     "ffi": "^2.2.0",
     "node-run-cmd": "^1.0.1",
-    "node-windows": "^0.1.14",
+    "node-windows": "^1.0.0-beta.8",
     "ref": "^1.3.5"
   },
   "bugs": {
